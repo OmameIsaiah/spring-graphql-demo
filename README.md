@@ -10,7 +10,8 @@ See the src/main/resources/schema.graphqls file for the GraphQL schema.
 
 ---
 
-GraphQL Playground URL: http://localhost:8181/graphiql?path=/graphql
+GraphQL Playground URL: http://localhost:8181/dev-movie-service/graphiql?path=/dev-movie-service/api/v1/query
+Endpoint URL: http://localhost:8181/dev-movie-service/api/v1/query
 
 query {
 movieById(id: 1) {
