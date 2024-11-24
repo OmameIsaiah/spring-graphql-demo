@@ -1,0 +1,11 @@
+server:
+  port: 8183
+  servlet:
+    contextPath: /prod-movie-service
+spring:
+  application:
+    name: prod-movie-service
+  graphql:
+    graphiql:
+      enabled: true
+    path: /api/v1/query
