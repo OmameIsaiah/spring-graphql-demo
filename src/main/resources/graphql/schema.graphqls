@@ -1,6 +1,8 @@
 type Query {
     movieById(id: ID!): Movie
     actorById(id: ID!): Actor
+    movieByTitle(title: String!): Movie
+    movies: [Movie]
 }
 
 type Movie {

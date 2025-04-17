@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Repository
@@ -23,6 +24,14 @@ public class MovieRepository {
 
     public Movie getById(Long id) {
         return mockMovies.stream().filter(movie -> movie.id().equals(id)).findFirst().orElse(null);
+    }
+
+    public Movie getByTitle(String title) {
+        return mockMovies.stream().filter(movie -> movie.title().equals(title)).findFirst().orElse(null);
+    }
+
+    public List<Movie> getAll() {
+        return mockMovies.stream().collect(Collectors.toList());
     }
 
     public void addMovie(Movie movie) {
